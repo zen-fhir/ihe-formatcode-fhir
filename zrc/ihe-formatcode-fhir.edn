@@ -1,0 +1,5 @@
+{ns ihe-formatcode-fhir,
+ import #{zen.fhir},
+ ig {:zen/tags #{zen.fhir/ig}, :value-sets value-sets},
+ value-sets {:zen/tags #{zen.fhir/value-sets},
+             :value-sets {"http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode" #zen/quote ihe-formatcode-fhir.value-set.formatcode/value-set}}}

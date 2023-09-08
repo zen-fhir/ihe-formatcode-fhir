@@ -1,0 +1,20 @@
+{ns ihe-formatcode-fhir.value-set.formatcode,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "The IHE FormatCode Value set is defined to be the set of FormatCode(s) defined by IHE, DICOM and HL7. These codes are intended to be preferred.",
+            :zen.fhir/version "0.6.32",
+            :fhir/code-systems #{{:fhir/url "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+                                  :zen.fhir/content :bundled}
+                                 {:fhir/url "http://terminology.hl7.org/CodeSystem/hl7-document-format-codes",
+                                  :zen.fhir/content :not-present}
+                                 {:fhir/url "http://dicom.nema.org/resources/ontology/DCM",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://ihe.net/fhir/ihe.formatcode.fhir/ValueSet/formatcode",
+            :version "1.1.0",
+            :ftr {:module "ihe-formatcode-fhir",
+                  :source-url "https://storage.googleapis.com",
+                  :source-type :cloud-storage,
+                  :ftr-path "ftr",
+                  :tag "init",
+                  :validation-index {:type :nippy,
+                                     :file "index.nippy"}}}}
